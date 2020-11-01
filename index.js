@@ -6,6 +6,7 @@ import {
 } from "./sorting.js";
 
 let inputs = document.querySelectorAll("[class^='numbers']");
+let outputs = document.querySelectorAll("[id^='number']");
 let numbers = [];
 
 for (let input of inputs) {
@@ -14,3 +15,10 @@ for (let input of inputs) {
   });
   numbers.push(number);
 }
+
+document.getElementById("bubble").addEventListener("click", () => {
+  for (let i = 0; i < numbers.length; i++) {
+    let result = bubbleSort(numbers[i]);
+    outputs[i].textContent = result.join(", ");
+  }
+});
