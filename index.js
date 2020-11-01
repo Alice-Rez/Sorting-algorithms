@@ -33,6 +33,10 @@ document.getElementById("merge").addEventListener("click", () => {
 });
 
 function sortArray(callback) {
+  for (let item of outputs) {
+    item.textContent = "";
+  }
+
   for (let i = 0; i < numbers.length; i++) {
     let result = callback(numbers[i]);
     outputs[i].textContent = result.join(", ");
