@@ -6,7 +6,7 @@ let array3 = [99, 99999, 999999999, 423.5, 423.6, 0.9];
 
 // --- BUBBLE SORT -----
 
-export function bubbleSort(array) {
+function bubbleSort(array) {
   let test = false;
   while (test === false) {
     test = true;
@@ -58,7 +58,7 @@ console.log(insertionSort([10, 5, 3, 8, 2, 6, 4, 7, 9, 1]));
 
 // b) Solution with sorting inside of original array
 
-export function insertionSortBetter(array) {
+function insertionSortBetter(array) {
   for (let i = 1; i < array.length; i++) {
     for (let j = 0; j < i; j++) {
       if (array[j] >= array[i]) {
@@ -81,7 +81,7 @@ console.log(insertionSortBetter([10, 5, 3, 8, 2, 6, 4, 7, 9, 1]));
 
 // ----- SELECTION SORT -----
 
-export function selectionSort(array) {
+function selectionSort(array) {
   for (let i = 0; i < array.length; i++) {
     let minimum = array[i];
 
@@ -108,7 +108,7 @@ console.log(selectionSort(array3));
 
 // ----- MERGE SORT -----
 
-export function mergeSort(array) {
+function mergeSort(array) {
   if (array.length < 2) {
     return array;
   } else {
